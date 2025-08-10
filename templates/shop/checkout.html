@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% load i18n %}
+{% block content %}
+<h2>{% trans "Validation de la commande" %}</h2>
+<form method="post" class="row g-3">{% csrf_token %}
+  {{ form.non_field_errors }}
+  {% for field in form %}
+  <div class="col-md-6"><label class="form-label">{{ field.label_tag }}</label>{{ field }}<div class="form-text text-danger">{{ field.errors }}</div></div>
+  {% endfor %}
+  <div class="col-12 text-end"><button class="btn btn-success">{% trans "Confirmer la commande" %}</button></div>
+</form>
+<p class="mt-3"><em>{% trans "Le paiement en ligne sera ajoutÃ© ultÃ©rieurement. Vous recevrez une confirmation par email." %}</em></p>
+{% endblock %}

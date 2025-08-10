@@ -1,0 +1,10 @@
+{% extends 'base.html' %}{% load i18n %}
+{% block content %}
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Belgium Parrot</h1>
+    <p class="col-md-8 fs-5">{% trans "Noix et produits sÃ©lectionnÃ©s, livraison BE/NL/FR/DE." %}</p>
+    <a href="{% url 'shop:product_list' %}" class="btn btn-primary btn-lg">{% trans "Voir le catalogue" %}</a>
+  </div>
+</div>
+{% endblock %}

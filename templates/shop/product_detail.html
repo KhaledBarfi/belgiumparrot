@@ -1,0 +1,18 @@
+{% extends 'base.html' %}{% load i18n %}{% load static %}
+{% block content %}
+<div class="row"><div class="col-md-8">
+  <img class="img-fluid mb-3" src="{{ PRODUCT_IMAGE_BASE_URL }}{{ p.sku|lower }}.jpg"
+       onerror="this.onerror=null;this.src='{% static 'img/placeholder.svg' %}';"
+       alt="{{ p.name_fr }}" style="max-height:420px; object-fit:contain;">
+  <h3>{% if current_language=='nl' %}{{ p.name_nl }}{% else %}{{ p.name_fr }}{% endif %}</h3>
+  <p class="lead">{{ p.price_eur_per_unit }} â‚¬ / {% if current_language=='nl' %}{{ p.unit_label_nl }}{% else %}{{ p.unit_label_fr }}{% endif %}</p>
+  <form method="post" action="{% url 'shop:cart_add' p.sku %}">{% csrf_token %}
+    <div class="input-group mb-3" style="max-width:280px;">
+      <span class="input-group-text">{% trans "QuantitÃ©" %}</span>
+      <input type="number" class="form-control" name="qty" value="1" min="1">
+      <button class="btn btn-success" type="submit">{% trans "Ajouter au panier" %}</button>
+    </div>
+  </form>
+  <p>{% if current_language=='nl' %}{{ p.description_nl|default:"" }}{% else %}{{ p.description_fr|default:"" }}{% endif %}</p>
+</div></div>
+{% endblock %}

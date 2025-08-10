@@ -1,0 +1,20 @@
+{% extends 'base.html' %}{% load i18n %}{% load static %}
+{% block content %}
+<h2 class="mb-3">{% trans "Catalogue" %}</h2>
+<div class="row g-3">
+{% for p in products %}
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img class="card-img-top p-3" src="{{ PRODUCT_IMAGE_BASE_URL }}{{ p.sku|lower }}.jpg"
+           onerror="this.onerror=null;this.src='{% static 'img/placeholder.svg' %}';"
+           alt="{{ p.name_fr }}" style="object-fit:contain; height:200px;">
+      <div class="card-body">
+        <h5 class="card-title">{% if current_language=='nl' %}{{ p.name_nl }}{% else %}{{ p.name_fr }}{% endif %}</h5>
+        <p class="card-text">{{ p.price_eur_per_unit }} â‚¬ / {% if current_language=='nl' %}{{ p.unit_label_nl }}{% else %}{{ p.unit_label_fr }}{% endif %}</p>
+        <a href="{% url 'shop:product_detail' p.sku %}" class="btn btn-outline-primary">{% trans "DÃ©tails" %}</a>
+      </div>
+    </div>
+  </div>
+{% empty %}<p>{% trans "Aucun produit." %}</p>{% endfor %}
+</div>
+{% endblock %}

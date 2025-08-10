@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% load i18n %}
+{% block content %}
+<div class="alert alert-success">{% blocktrans %}Merci ! Votre commande nÂ° {{ order_id }} a Ã©tÃ© enregistrÃ©e.{% endblocktrans %}</div>
+<a href="{% url 'shop:product_list' %}" class="btn btn-primary">{% trans "Retour au catalogue" %}</a>
+{% endblock %}

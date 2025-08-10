@@ -1,0 +1,20 @@
+{% extends 'base.html' %}{% load i18n %}
+{% block content %}
+<h2>{% trans "Panier" %}</h2>
+{% if lines %}
+<table class="table"><thead><tr>
+<th>{% trans "Produit" %}</th><th>{% trans "QuantitÃ©" %}</th><th>{% trans "Total" %}</th><th></th>
+</tr></thead><tbody>
+{% for p, qty, line_total in lines %}
+<tr>
+<td>{% if current_language=='nl' %}{{ p.name_nl }}{% else %}{{ p.name_fr }}{% endif %}</td>
+<td>{{ qty }}</td><td>{{ line_total }} â‚¬</td>
+<td><a class="btn btn-sm btn-outline-danger" href="{% url 'shop:cart_remove' p.sku %}">{% trans "Supprimer" %}</a></td>
+</tr>
+{% endfor %}</tbody></table>
+<div class="text-end">
+  <p class="fs-5">{% trans "Sous-total" %}: <strong>{{ items_total }} â‚¬</strong></p>
+  <a class="btn btn-primary" href="{% url 'shop:checkout' %}">{% trans "Passer au paiement" %}</a>
+</div>
+{% else %}<p>{% trans "Votre panier est vide." %}</p>{% endif %}
+{% endblock %}
