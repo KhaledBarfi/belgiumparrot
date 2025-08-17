@@ -1,0 +1,3 @@
+﻿/* custom.css - surcharge légère Belgium Parrot (18/08/2025) */
+:root { --bp-accent: #ff8a00; }        /* accent orange doux */
+.badge-accent{ background:rgba(255,138,0,.12); color:#ff8a00; padding:.2rem .5rem; border-radius:999px; border:1px solid rgba(255,138,0,.22) }
