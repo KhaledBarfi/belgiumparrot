@@ -1,0 +1,4 @@
+﻿/* banner.css - 19/08/2025 */
+#bp-banner{opacity:.0; transition:opacity .25s ease; margin:.5rem 0;}
+#bp-banner.show{opacity:1}
+#bp-banner .badge{background:#0aa77f; color:#fff; padding:.25rem .5rem; border-radius:8px}
