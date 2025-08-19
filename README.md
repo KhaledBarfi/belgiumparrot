@@ -18,3 +18,7 @@ $env:PRODUCT_IMAGE_BASE_URL="https://cdn.tondomaine.com/products/"
 2. pip install -r requirements.txt
 3. python manage.py migrate && python manage.py runserver
 4. CSS additionnel chargé via static/css/custom.css.
+
+## Scripts front (MAJ 19/08)
+- static/js/app.js (bandeau)
+- static/css/banner.css (style bandeau)
