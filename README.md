@@ -22,3 +22,6 @@ $env:PRODUCT_IMAGE_BASE_URL="https://cdn.tondomaine.com/products/"
 ## Scripts front (MAJ 19/08)
 - static/js/app.js (bandeau)
 - static/css/banner.css (style bandeau)
+
+## Impression (MAJ 21/08/2025)
+- static/css/print.css pour un rendu imprimable propre.
