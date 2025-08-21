@@ -1,0 +1,5 @@
+﻿/* print.css - 21/08/2025 */
+@media print {
+  nav, footer { display:none !important; }
+  main { padding:0 }
+}
