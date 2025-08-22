@@ -1,0 +1,4 @@
+﻿/* navbar.css - 22/08/2025 */
+nav.navbar { background-color: #007bff; }
+nav.navbar a { color: white; }
+nav.navbar a:hover { text-decoration: underline; }
