@@ -1,0 +1,4 @@
+﻿/* pagination.css - 23/08/2025 */
+.pagination { display: flex; list-style: none; padding-left: 0; }
+.pagination li { margin: 0 .25rem; }
+.pagination li a { padding: .5rem .75rem; border: 1px solid #ddd; border-radius: 4px; }
