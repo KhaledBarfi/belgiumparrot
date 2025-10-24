@@ -1,6 +1,6 @@
 # Belgium Parrot (Django ‚FR/NL, SQLite)
 
-## DÃƒÂ©marrer (Windows PowerShell)
+## Demarrer (Windows PowerShell)
 python -m venv .venv
 . .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
