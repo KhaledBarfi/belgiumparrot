@@ -9,8 +9,7 @@ python manage.py loaddata shop/fixtures/initial_data.json
 python manage.py createsu
 python manage.py runserver
 
-## Images produits via CDN (optionnel)
-$env:PRODUCT_IMAGE_BASE_URL="https://cdn.tondomaine.com/products/"
+
 ## Déploiement local (MAJ 2025-08-18)
 
 1. Créer/activer l'environnement virtuel.
