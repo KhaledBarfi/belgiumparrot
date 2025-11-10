@@ -10,7 +10,7 @@ python manage.py createsu
 python manage.py runserver
 
 
-## Déploiement local (MAJ 2025-08-18)
+## Déploiement local (MAJ 2025-10-06)
 
 1. Créer/activer l'environnement virtuel.
 2. pip install -r requirements.txt
